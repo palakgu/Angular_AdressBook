@@ -1,0 +1,26 @@
+<main>
+  
+    <div id="ab">
+      <div id="logo"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1gUREWrhNxUHccdi2SduWs5kn9fEH0SK82g&s" alt="logo">  <h2><span>ADDRESS </span><br>BOOK</h2></div>
+     
+      <div id="details">
+       <div id="nav">
+        <h2 *ngIf="!show">Person Details</h2>
+        <h1 *ngIf="show">PERSON ADDRESS FORM</h1>
+        <button (click)="toggleForm()">
+          {{ showForm ? '❌' : '+Add Person' }}
+        </button>
+       </div>
+       
+        <app-person-list *ngIf="!showForm"></app-person-list>
+        <app-person-form *ngIf="showForm" (formClosed)="closeForm()"></app-person-form>
+      </div>
+    </div>
+  
+  </main>
+  
+  
+  
+  
+  
+  
